@@ -9,7 +9,9 @@ function User() {
             <h1>User with id {userId} is named : {users[Number(userId) - 1].name}</h1>
             <hr />
             <Link to="followers">See Followers</Link>
-            <Outlet />
+            <Outlet context={{
+                userName: users[Number(userId) - 1].name
+            }} />
         </div>
     );
 }

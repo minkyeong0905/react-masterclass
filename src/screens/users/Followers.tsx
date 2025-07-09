@@ -1,5 +1,13 @@
+import { useOutletContext } from "react-router-dom";
+
+interface IFollowersContext {
+    userName: string;
+}
+
 function Followers() {
-    return <h1>Followers</h1>;
+    const { userName } = useOutletContext<IFollowersContext>();
+    
+    return <h1>Here are {userName}'s followers</h1>;
 }
 
 export default Followers;
