@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const Loader = styled.span`
@@ -180,6 +180,8 @@ function Coin() {
                             <span>{priceInfo?.max_supply}</span>
                         </OverviewItem>
                     </Overview>
+
+                    <Outlet />
                 </>
             )}
         </Container>
