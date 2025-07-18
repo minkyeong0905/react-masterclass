@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { RouterProvider } from "react-router-dom";
 import router from "./Router";
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -72,6 +73,7 @@ function App() {
     <>
       <GlobalStyle />
       <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={true} />
     </>
   );
 }

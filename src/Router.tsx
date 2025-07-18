@@ -14,12 +14,12 @@ const router = createBrowserRouter([
        ,element: <Coin />
        ,children: [
            {
-               path: "price"
-              ,element: <Price />
-           }
-          ,{
                path: "chart"
               ,element: <Chart />
+           }
+          ,{
+               path: "price"
+              ,element: <Price />
            }
         ]
     }
